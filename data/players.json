@@ -1,0 +1,12 @@
+{
+    "test1": {"x": 0.5, "y": 0.5, "avatar": "player01"}
+    ,"test12": {"x": 0, "y": 0, "avatar": "player01"}
+    ,"test13": {"x": 0, "y": 1, "avatar": "player01"}
+    ,"test14": {"x": 1, "y": 0, "avatar": "player01"}
+    ,"test15": {"x": 0.9, "y": 0.9, "avatar": "player01"}
+    ,"test2": {"x": 4.5, "y": 5.5, "avatar": "player01"}
+    ,"test3": {"x": 8.5, "y": 4.5, "avatar": "player01"}
+    ,"test4": {"x": 12.5, "y": 0.5, "avatar": "player01"}
+    ,"test5": {"x": 16.5, "y": 8.5, "avatar": "player01"}
+    ,"test10": {"x": 50.5, "y": 50.5, "avatar": "player01"}
+}

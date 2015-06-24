@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            generateHeightMap = function(im){
+                var canvas = document.createElement('canvas');
+                var ctx = canvas.getContext("2d");
+                canvas.width = im.width;
+                canvas.height = im.height;
+
+                ctx.drawImage(im, 0, 0);
+                var m = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+                var l, i, map = [], pos = 0;
+                for(l = 0; l < m.height; l++){
+                    map[l] = [];
+                    for(i = 0; i < m.width; i++){
+                        map[l][i] = m.data[pos]/255;
+                        pos = pos + 4;
+                    }
+                }
+                console.log(map.length);
+                return map;
+            };
+        </script>
+    </head>
+    <body>
+        <script>
+            var img = new Image();            
+            img.src = './heightmap.png';
+            img.onload = function () {
+                document.writeln((JSON.stringify(generateHeightMap(img))));
+            };
+        </script>
+    </body>
+</html>

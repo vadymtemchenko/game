@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+     #input, #message {
+        border: 1px solid black;
+     }
+     #message p {
+        margin: 0;
+        padding: 0 4px;
+     }
+     #canvas {
+        width: 800px;
+        height: 600px;
+        border: 1px solid black;
+     }
+    </style>
+    <script type="text/javascript">
+
+        
+        
+    </script>
+
+    <script type="text/javascript" src="client.js"></script>
+    <script type="text/javascript" src="net.js"></script>
+</head>
+<body>
+    <div id="input" contenteditable="true"></div>
+    <div id="message"></div>
+    <fieldset>
+        <label for="server">server:</label>
+        <select id="server">
+            <option>ws://91.195.249.47:9000</option>
+            <option>ws://192.168.0.102:9000</option>
+            <option>ws://127.0.0.1:9000</option>
+        </select>
+        <img id="avatar_img" src="img/octo_50.png">
+        <select id="avatar" style="heihgt: 50px;" onchange="change_avatar();">
+            <option>обычный</option>
+            <option>белый</option>
+            <option>серый</option>
+            <option>чёрный</option>
+            <option>красный</option>
+            <option>оранжевый</option>
+            <option>жёлтый</option>
+            <option>зелёный</option>
+            <option>голубой</option>
+            <option>синий</option>
+            <option>фиолетовый</option>
+        </select>
+
+
+        <button id="connect_btn" onclick="connect();">connect</button>
+        <!-- <input type="button" onclick="sendMessage();"> -->
+    </fieldset>
+
+    <canvas id="canvas"></canvas>
+
+</body>
+</html>

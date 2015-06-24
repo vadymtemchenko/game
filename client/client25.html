@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">     
+        <style>
+            html, body, canvas {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+        </style>
+        <script>
+            var el,
+                ver = Math.round((Math.random()*1000)),
+                s = 'client25,net';
+        
+            s.split(',').forEach(function(name){
+                el = document.createElement('script');
+                el.src = name + '.js?' + ver;
+                document.head.appendChild(el);
+            });
+        </script>
+    </head>
+    <body>
+        <fieldset id="login">
+            <label for="server">server:</label>
+            <select id="server">
+                <option>ws://127.0.0.1:9000</option>
+                <option>ws://91.195.249.47:9000</option>
+                <option>ws://192.168.0.102:9000</option>
+            </select>
+            <label for="playerName">name:</label>
+            <input type="text" id="playerName" value="test1">
+
+            <button id="connect_btn" onclick="connect();">connect</button>
+            <!-- <input type="button" onclick="sendMessage();"> -->
+        </fieldset>
+    </body>
+</html>
